@@ -7,6 +7,7 @@
   * [因子定义](feng-xian-mo-xing/yin-zi-ding-yi.md)
   * [因子暴露计算](feng-xian-mo-xing/yin-zi-bao-lu-ji-suan.md)
   * [因子收益率计算](feng-xian-mo-xing/yin-zi-shou-yi-lv-ji-suan.md)
+  * [因子有效性检验](feng-xian-mo-xing/yin-zi-you-xiao-xing-jian-yan.md)
   * [因子风险估计](feng-xian-mo-xing/yin-zi-feng-xian-gu-ji.md)
   * [残差风险估计](feng-xian-mo-xing/can-cha-feng-xian-gu-ji.md)
 * [收益模型](yin-zi-mo-xing.md)
