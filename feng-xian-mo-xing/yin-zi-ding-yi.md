@@ -10,6 +10,18 @@
 
 ### 国家因子
 
+Barra USE4认为国家因子的加入可以更好的构建纯行业因子，同时让风险预测变得更加可靠。我们考虑等式：
+$$
+\tilde{f_i}=f_c+f_i
+$$
+其中$$\tilde{f_i}$$代表没有国家因子的行业$$i$$ 的收益率，$$f_c$$代表国家因子的收益率，$$f_i$$代表存在国家因子的行业$$i$$的收益率，我们可以发现如果我们估计两个行业因子的协方差，$$\tilde\rho_{ij}$$，我们会发现当具有国家因子时，$$\tilde\rho_{ij}$$的反应更加剧烈，原因在于$$\tilde\rho_{ij}$$将变为：
+$$
+\tilde\rho_{ij}=\frac{\sigma_c^2+\rho_{ci}\sigma_c\sigma_i+\rho_{cj}\sigma_c\sigma_j+\rho_{ij}\sigma_i\sigma_j}{\tilde\sigma_i\tilde\sigma_i}
+$$
+因为波动率半衰期更短，因此加入国家因子的因子相关性将具有更强的敏感性。
+
+
+
 Barra USE4认为加入国家因子会造成多重共线性，因为对于所有的股票n,行业因子的暴露如下:
 
 $$
