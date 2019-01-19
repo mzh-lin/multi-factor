@@ -4,7 +4,7 @@
 * [理论基础](li-lun-ji-chu.md)
 * [数据构建](shu-ju-gou-jian.md)
 * [风险模型](feng-xian-mo-xing.md)
-  * [因子定义](feng-xian-mo-xing/123.md)
+  * [因子定义](feng-xian-mo-xing/yin-zi-ding-yi.md)
   * [因子暴露计算](feng-xian-mo-xing/yin-zi-bao-lu-ji-suan.md)
   * [因子收益率计算](feng-xian-mo-xing/yin-zi-shou-yi-lv-ji-suan.md)
   * [因子风险估计](feng-xian-mo-xing/yin-zi-feng-xian-gu-ji.md)
