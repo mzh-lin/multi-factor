@@ -11,13 +11,9 @@
 ###### 国家因子
 
 Barra USE4认为加入国家因子会造成多重共线性，因为对于所有的股票$$n$$,行业因子的暴露如下:
-
-
 $$
 \sum_iX_{ni}=1
 $$
-
-
 因此要限制行业的加权收益为0
 
 ###### 行业因子
@@ -37,6 +33,4 @@ $$
 风格因子是共同因子中另一重要部分，风格因子总共包含9 大类因子、20 个小因子，其中大类因子包含Beta、Momentum、Size、Earnings Yield、Volatility、Growth、Value、Leverage 和Liquidity，具体为：
 
 ![](/assets/import.png)
-
-
 
