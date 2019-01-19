@@ -30,7 +30,7 @@
 
 较为传统去极值的方法有3 倍标准差法和中位数法。在BARRA 的风险模型中，普遍采用3 倍标准差法，但是我们研究发现，3 倍标准差法在处理分布偏度较大的因子截面时，仍然会产生异常结果影响回归方程的稳定性，因此我们使用中位数法剔除因子异常值。
 
-对于一个截面的样本$x_i,i=1,2,\dots,n$，首先求中位数, $x_{median}=median(x_i)$，然后求所有样本点距离$x_{median}$的中位数, $MAD = median(x_i-x_{median})$. 将超出$x_{median}\pm5MAD$的数据调整到$x_{median}\pm5MAD$。
+对于一个截面的样本$$x_i,i=1,2,\dots,n$$，首先求中位数, $$x_{median}=median(x_i)$$，然后求所有样本点距离$$x_{median}$$的中位数, $$MAD = median(x_i-x_{median})$$. 将超出$$x_{median}\pm5MAD$$的数据调整到$$x_{median}\pm5MAD$$。
 
 
 
@@ -40,7 +40,7 @@
 $$
 d_{nl}=\frac{d_{nl}^{raw}-\mu_l}{\sigma_l}
 $$
-其中，$d_{nl}$为标准化因子序列，$d_{nl}^{raw}$为原始因子序列，$\mu_l$为$d_{nl}^{raw}$算数平均值，$\sigma_l$为$d_{nl}^{raw}$标准差
+其中，$$d_{nl}$$为标准化因子序列，$$d_{nl}^{raw}$$为原始因子序列，$$\mu_l$$为$$d_{nl}^{raw}$$算数平均值，$$\sigma_l$$为$$d_{nl}^{raw}$$标准差
 
 
 
