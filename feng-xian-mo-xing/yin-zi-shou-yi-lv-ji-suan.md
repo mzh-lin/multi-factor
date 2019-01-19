@@ -23,3 +23,86 @@ $$
 
 ## 估计方法
 
+### 最小二乘法(OLS)
+
+我们需要找到收益率向量$$f$$ 使得残差平方和达到最小，即：
+$$
+\begin{align*}
+Min\ Q&=\sum_{i=1}^{N}\varepsilon_i^2=\sum_{i=1}^{N}(r_i-\hat{r}_i)^2\\
+&=（R-X\hat{f})'(R-X\hat{f})\\
+&= R'R-R'X\hat{f}-\hat{f}'X'R+\hat{f}'X'X\hat{f}'\\
+&= R'R-2\hat{f}'X'R+\hat{f}'X'X\hat{f}
+\end{align*}
+$$
+令$$\frac{\partial Q}{\partial\hat{f}}=0$$，得到$$-X'R+X'X\hat{f}=0$$，因此$$\hat{f}=(X'X)^{-1}XR$$
+
+OL S 最小二乘估计法仅当不同股票的残差序列$$\varepsilon_{it}$$方差相同时,$$\hat{f}$$才是最优估计。然而，通常情况下，金融时间序列的数据均存在较明显的异方差性，即每只股票的$$\varepsilon_{it}$$方差是不相同的。为了解决异方差性，通常采用广义最小二乘（GLS）估计方法。
+
+### 广义最小二乘（GLS）
+
+广义最小二乘法假设的$$\varepsilon_{it}$$方差不相同，即:
+$$
+Var(U)=\Sigma=\left| \begin{array}{}
+   \sigma_1^2 & \sigma_{12} &\cdots& \sigma_{1n} \\
+   \sigma_{21} & \sigma_2^2 &\cdots& \sigma_{2n} \\
+   \cdots &\cdots&\cdots&\cdots\\
+   \sigma_{n1} &\cdots&\cdots&  \sigma_n^2
+  \end{array} \right|
+$$
+由于矩阵$$\Sigma$$是正定阵，因此可以写成$$\Sigma=KK'$$，其中$$K$$为非奇异矩阵
+
+对于$$R=Xf+U$$,可得到：
+$$
+K^{-1}R=K^{-1}Xf+K^{-1}U
+$$
+令$$R^*=K^{-1}R,X^*=K^{-1}X,U^*=K^{-1}U,$$则可以得到：
+$$
+R^*=X^*f+U^*
+$$
+由于$$E(U^*)=0$$,并且
+$$
+\begin{align*}
+Var(U^*)&=Var(K^{-1}U)\\
+&=K^{-1}Var(U)K^{-1}\\
+&=K^{-1}KK'(K')^{-1}\\
+&=I
+
+\end{align*}
+$$
+满足最小二乘估计（OLS）的同方差性条件。据OLS 中$$f$$ 的估计结果，可以得到
+$$
+
+$$
+广义最小二乘（GLS）估计法在已知残值波动率矩阵$$\Sigma$$ 的条件下，可得到$$f$$ 的无偏估计量$$\hat{f}_{GLS}$$。
+
+而在结构化风险模型中，由于假设残差之间不存在相关性，因此可利用广义最小二乘GLS方法的特殊形式加权最小二乘法（WLS）处理。
+
+### 加权最小二乘法（WLS）
+
+加权最小二乘法WLS假设的$$\varepsilon_{it}$$方差不相同，但$$\varepsilon_{it}$$之间协方差为0，即：
+$$
+Var(U)=\Sigma=\left| \begin{array}{}
+   \sigma_1^2 &  & & \\
+    & \sigma_2^2 & &   \\
+     & &\cdots& \\
+    & & &  \sigma_n^2
+  \end{array} \right|
+$$
+将上式中$$\Sigma$$写作
+$$
+\Sigma=\sigma_w^2\left| \begin{array}{}
+   1/w_1 &  & & \\
+    &1/w_2 & &   \\
+     & &\cdots& \\
+    & & &  1/w_n
+  \end{array} \right|
+$$
+令$$W=diag(w_1,w_2,\cdots,w_n)$$,则$$\Sigma=\sigma_w^2W^{-1}$$,则$$\Sigma^{-1}=(1/\sigma_w^2)W$$。因此，根据GLS中$$\hat{f}_{GLS}$$的估计表达式可得：
+$$
+\begin{align*}
+\hat{f}_{WLS}&=(X'\Sigma^{-1}X)^{-1}X'\Sigma^{-1}R\\
+&=\sigma_w^2(X'WX)^{-1}X'(1/\sigma_w^2)WR\\
+&=(X'WX)^{-1}X'WR\\
+
+\end{align*}
+$$
