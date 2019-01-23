@@ -51,9 +51,9 @@ Boxplot 法由Turkey(1977)年提出, 是一种经验处理方法，假设$$Q_1$$
 
 
 
-**偏度调整Boxplot法**
+#### 偏度调整Boxplot法
 
-首先样本偏度定义采用了Brys(2004)提出的MedCouple 方法：
+首先样本偏度定义采用了Brys(2004)提出的[MedCouple](http://www.statsmodels.org/stable/generated/statsmodels.stats.stattools.medcouple.html?highlight=medcouple#statsmodels.stats.stattools.medcouple) 方法：
 $$
 \begin{align*}
 md=&median(x_i,i=1,2,\cdots,n)\\
@@ -77,6 +77,10 @@ U=\left\{\begin{array}{rcl}
 \end{align*}
 $$
 区间$$(-\infty,L)\cup(U,\infty)$$里的数据被定义为异常数据。和原始Boxplot 方法相比，当样本数据分布右偏时，此法会提升正常数据区间上限的数值；样本数据左偏时，则会降低正常数据区间下限的数值。Hubert & Vandervieren(2007)仿真生成了不同偏度分布的数据样本，并在其中人为加入一些异常数据，发现调整后Boxplot 方法对异常数据的识别能力比传统方法要强很多。
+
+
+
+> 这些异常值侦测方法都是针对单变量的，而我们实际做选股模型往往会用到多个因子数据，多个一维的正常数据组合在一起可能变成一个高维的异常数据。例如，10 岁是一个正常年龄，180cm 是一个正常身高，但如果组合在一起10 岁小孩180cm 身高则会变成一个异常数据。因此除了单变量的异常值侦测，理论上也需要考察多个因子组合在一起后的高维异常值，不过在做高维数据分析时，需要填充单维度上的缺省数据，而且高维分析很多基于高维联合正态分布假设，有必要先做数据变化再来做异常值分析，具体方法可以参考Aggarwa（l 2001）。
 
 
 
