@@ -63,13 +63,10 @@ $$
 然后再给出了经过偏度调整Boxplot 方法上下限:
 $$
 \begin{align*}
-
 L=\left\{\begin{array}{rcl}
 &Q_1-1.5*exp(-3.5*mc)*IQR& if \ \  mc\geq0\\
 &Q_1-1.5*exp(-4*mc)*IQR& if\ \  mc<0\\
-
-\end{array} \right.
-\\
+\end{array} \right.\\
 U=\left\{\begin{array}{rcl}
 &Q_3+1.5*exp(-4*mc)*IQR& if\ \  mc\geq0\\
 &Q_3+1.5*exp(-3.5*mc)*IQR & if\ \  mc<0\\
