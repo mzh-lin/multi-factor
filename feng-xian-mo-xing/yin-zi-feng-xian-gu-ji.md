@@ -9,4 +9,3 @@ Barra USE4主要的预测步骤包括：
 1. 日度协方差估计
 2. Eigenfactor 调整
 3. Volatility Regime调整
-
