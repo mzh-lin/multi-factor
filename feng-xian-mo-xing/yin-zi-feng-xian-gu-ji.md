@@ -75,3 +75,38 @@ Shepard指出模型低估风险，即采样得到的风险小于真实风险。�
 
    ![image-20191121213533483](E:\GitHub\multi-factor\feng-xian-mo-xing\yin-zi-feng-xian-gu-ji.assets\image-20191121213533483.png)
 
+![image-20191121213658967](E:\GitHub\multi-factor\feng-xian-mo-xing\yin-zi-feng-xian-gu-ji.assets\image-20191121213658967.png)
+
+### 波动率偏误调整
+
+$F^{Eigen}$可能系统性高估或者低估，利用波动率偏误在界面上进行整体缩放
+
+![image-20191121213831500](E:\GitHub\multi-factor\feng-xian-mo-xing\yin-zi-feng-xian-gu-ji.assets\image-20191121213831500.png)
+
+## 特异性收益方差矩阵:EWMA
+
+### 日特异性收益U
+
+![image-20191121213929952](E:\GitHub\multi-factor\feng-xian-mo-xing\yin-zi-feng-xian-gu-ji.assets\image-20191121213929952.png)
+
+### Newey-West调整
+
+![image-20191121214017372](E:\GitHub\multi-factor\feng-xian-mo-xing\yin-zi-feng-xian-gu-ji.assets\image-20191121214017372.png)
+
+### 结构化调整
+
+个股存在缺失值或异常值，利用数据质量好的股票推测数据质量差的股票
+
+![image-20191121214106361](E:\GitHub\multi-factor\feng-xian-mo-xing\yin-zi-feng-xian-gu-ji.assets\image-20191121214106361.png)
+
+![image-20191121214122771](E:\GitHub\multi-factor\feng-xian-mo-xing\yin-zi-feng-xian-gu-ji.assets\image-20191121214122771.png)
+
+![image-20191121214201846](E:\GitHub\multi-factor\feng-xian-mo-xing\yin-zi-feng-xian-gu-ji.assets\image-20191121214201846.png)
+
+### 贝叶斯压缩
+
+![image-20191121214319832](E:\GitHub\multi-factor\feng-xian-mo-xing\yin-zi-feng-xian-gu-ji.assets\image-20191121214319832.png)
+
+### 波动率偏误调整
+
+![image-20191121214346454](E:\GitHub\multi-factor\feng-xian-mo-xing\yin-zi-feng-xian-gu-ji.assets\image-20191121214346454.png)
