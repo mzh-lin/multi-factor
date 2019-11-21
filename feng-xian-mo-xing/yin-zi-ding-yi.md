@@ -49,3 +49,6 @@ $$
 ![](../.gitbook/assets/import.png)
 
 ![image-20191121204759174](E:\GitHub\multi-factor\feng-xian-mo-xing\yin-zi-ding-yi.assets\image-20191121204759174.png)
+
+![image-20191121205238394](E:\GitHub\multi-factor\feng-xian-mo-xing\yin-zi-ding-yi.assets\image-20191121205238394.png)
+
